@@ -1,0 +1,39 @@
+﻿@model List<Student>
+<div class="d-flex justify-content-between">
+
+    <div>
+        <h1 class=""><b>Şagirdlər üçün <br> qeydiyyat </b></h1>
+        @foreach (Student student in Model)
+        {
+        <style>
+            table, th, td {
+                border: 1px solid black;
+            }
+        </style>
+        <body>
+           
+                
+            
+           
+
+                <table style="width:100%">
+                <tr>
+                    <td>@student.Name.</td>
+                    <td>@student.Surname</td>
+                    <td>@student.GroupID</td>
+                    <td>@student.TeacherId</td>
+                </tr>
+            </table>
+
+            <p>To understand the example better, we have added borders to the table.</p>
+
+        </body>
+        }
+    </div>
+            
+    <div>
+
+        <img src="https://virtual.edu.az/images/sagird_banner.svg" alt="">
+    </div>
+</div>
+

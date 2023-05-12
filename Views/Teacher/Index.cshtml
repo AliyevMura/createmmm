@@ -1,0 +1,68 @@
+﻿@model List<Teacher>
+
+@*<div class="d-flex justify-content-between">
+
+    <div>
+        <h1 class=""><b>Müəllimlər üçün <br> qeydiyyat </b></h1>
+
+        <div class="w-100">
+            <p class="text-cl"><b>Fərdi identifikasiya nömrəsi (FİN) / UTIS ID * <span class="text-danger"></span></b> </p>
+            <input placeholder="FIN-UTIS/ID" class="input-student" type="text"> <br>
+            <p class="text-cl"><b>Doğum tarixi * <span class="text-danger"></span></b></p>
+            <input placeholder="Doğum tarixi *" class="input-student" type="text">
+            <div class="d-none stud-qeyd">
+                <p class="text-cl"><b>Müəllimin fərdi identifikasiya nömrəsi (FİN) / UTIS ID <span class="text-danger">*</span></b> </p>
+                <input placeholder="(FİN) / UTIS ID " class="input-student" type="text">
+                <p class="text-cl"><b>Müəllimin Dogum Tarixi <span class="text-danger">*</span></b></p>
+                <input placeholder="Dogum Tarixi" class="input-student" type="text">
+            </div>
+            <div class="d-flex justify-content-between pt-2">
+                <p><b>SIfreni Berpa Et</b></p>
+                <button type="button" class="btn btn-warning">Davam et</button>
+
+            </div>
+        </div>
+    </div>
+
+    <div>
+
+        <img src="https://virtual.edu.az/images/muellim_banner.svg" alt="">
+    </div>
+</div>*@
+<div class="d-flex justify-content-between">
+
+    <div>
+        <h1 class=""><b>Şagirdlər üçün <br> qeydiyyat </b></h1>
+        @foreach (Teacher teacher in Model)
+        {
+            <style>
+                table, th, td {
+                    border: 1px solid black;
+                }
+            </style>
+            <body>
+
+
+
+
+
+                <table style="width:100%">
+                    <tr>
+                        <td>@teacher.Name</td>
+                        <td>@teacher.Age</td>
+                        
+                    </tr>
+                </table>
+
+                <p>To understand the example better, we have added borders to the table.</p>
+
+            </body>
+        }
+    </div>
+
+    <div>
+
+        <img src="https://virtual.edu.az/images/sagird_banner.svg" alt="">
+    </div>
+</div>
+

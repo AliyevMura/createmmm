@@ -1,0 +1,46 @@
+﻿@model List<Student>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-lg-6 grid-margin stretch-card">
+    <div>
+
+ <a  class="btn btn-success text-Light "asp-area = "Admin" asp-controller ="Student" asp-action="Create">Create Student</a>
+    </div class="d-flex justify-content-end-mb-2 ">
+   
+    <div class="card">
+        <div class="card-body">
+           
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>
+                                @foreach (var item in Model)
+                                {
+                                    <td>
+                                        @item.Id
+                                         @item.Name
+                                          @item.Surname
+                                           @item.Group
+                                    </td>
+                                        
+                                   
+                                 
+                                }
+                            </th>
+                           
+                        </tr>
+                    </thead>
+                    
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+                  
